@@ -1,16 +1,16 @@
 # offertons-app
 ## Overview
 
-This is a high-level overview of how you could implement a photo upload and management solution using AWS services.
+This is a high-level overview of how to implement a photo upload and management solution using AWS services.
 
 ### Architecture
 
 Here's an overview of the architecture:
 
-- A React app hosted on S3 that allows users to upload photos and view photo details.
-- An API Gateway API that exposes three REST APIs: one for listing photos, one for uploading photos, and one for retrieving photo details.
+- A React app hosted on S3 that allows users to upload offers and view offers details.
+- An API Gateway that exposes three REST APIs: one for listing offers, one for uploading offers, and one for retrieving offer details.
 - Three Lambda functions, one for each API, that handles the business logic for that specific API.
-- An Amazon DynamoDB table that stores the metadata for each photo, using a Single-Table Design.
+- An Amazon DynamoDB table that stores the metadata for each offer, using a Single-Table Design.
 - An Amazon S3 bucket that stores the uploaded photos.
 - An Amazon CloudFront distribution that serves the React app and the API Gateway API.
 - An AWS Lambda function that resizes the uploaded photos to WebP format using the Sharp library.
@@ -31,7 +31,7 @@ Here's how the different components interact with each other:
 
 ### Steps
 
-To implement this architecture, you could follow these steps:
+To implement this architecture, I have to follow these steps:
 
 1. Create an S3 bucket to store the uploaded photos.
 2. Create an IAM policy that allows S3 to trigger the Lambda function that resizes the uploaded photos.
